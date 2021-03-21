@@ -15,6 +15,7 @@
 */
 #include "experiments.h"
 #include <cstring>
+#include <string>
 
 //#define NO_SCREEN_OUT 
 
@@ -630,9 +631,9 @@ Population *pole2_test(int gens, int velocity) {
   }
   memset(winnergens, 0, NEAT::num_runs*sizeof(int));
 
-  char *non_markov_starter = "pole2startgenes2";
-  char *markov_starter = "pole2startgenes1";
-  char *startstring;
+  string non_markov_starter = "pole2startgenes2";
+  string markov_starter = "pole2startgenes1";
+  string startstring;
 
   if (velocity==0)
     startstring = non_markov_starter;
